@@ -1,15 +1,29 @@
-/**
- * Created by Andrey on 24.09.2016.
- * skype: snaipi91;
- * mail: snaipi91@rambler.ru
- */
-var express = require('express');
-var app = express();
+/*eslint-disable import/default*/
 
-app.set('port', (process.env.PORT || 3000));
+import 'babel-polyfill';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {Router, browserHistory} from 'react-router';
 
-app.use('/', express.static(__dirname));
+import configureStore from './store/configureStore';
+import configureRoutes from './routes';
 
-app.listen(app.get('port'), function() {
-    console.log('Server started: http://localhost:' + app.get('port') + '/');
-});
+const store = configureStore();
+const routes = configureRoutes(store);
+
+import 'react-select/scss/default.scss';
+import './style/index.scss';
+
+// import socketActions from './actions/socketActions';
+
+// socketActions(store);
+
+console.log(ReactDOM);
+
+ReactDOM.render(
+	<Provider store={store}>
+		<Router history={browserHistory} routes={routes}/>
+	</Provider>,
+	document.getElementById('shop')
+);

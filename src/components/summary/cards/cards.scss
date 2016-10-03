@@ -1,0 +1,40 @@
+@import '../../../consts/styles';
+
+.users-card {
+	&.mdl-card {
+		width: 256px;
+
+		.mdl-card__title {
+			height: 200px;
+			background: url('../../../images/summary/users.jpg') center no-repeat;
+			background-size: 256px 200px;
+		}
+		background-color: $pale-grey;
+	}
+
+	.digits {
+		font-size: 18px;
+		line-height: 24px;
+
+		span {
+			float: right;
+			vertical-align: top;
+		}
+
+		&--error {
+			cursor: help;
+		}
+	}
+}
+
+.rotate-animation {
+	animation: spin 1s linear infinite;
+}
+
+.material-icons {
+	&.material-icons--red {
+		color: red;
+	}
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

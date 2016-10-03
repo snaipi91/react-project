@@ -1,0 +1,76 @@
+@import "variables";
+@import "mixins";
+@import "loading";
+
+.paymo-logo {
+  background: url("../images/logo-dark-new-160.svg") no-repeat 0 0;
+  display: inline-block;
+  width: 160px;
+  height: 29px;
+  margin: 0 0 -10px 0;
+}
+
+.cont {
+  &--padding {
+    padding: 10px;
+  }
+}
+
+.mdl-layout__header {
+  background-color: $color-main;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mdl-badge {
+  &--no-margin {
+    margin: 0;
+
+    &[data-badge]:after {
+      right: -6px;
+      color: #FFFFFF;
+      width: 30px;
+      height: 18px;
+      font-size: 10px;
+      border-radius: 7px;
+    }
+  }
+}
+
+.buttons-block {
+  display: inline-block;
+  position: relative;
+}
+
+.report-filter {
+  &:after {
+    @include after-clear();
+  }
+
+  &__points {
+    position: relative;
+    display: block;
+
+    &--checkboxes {
+      .mdl-checkbox {
+        margin-top: 7px;
+      }
+    }
+  }
+
+  .submit-form {
+    .mdl-button {
+      color: #FFFFFF;
+    }
+  }
+
+  .Select {
+    &.is-open {
+      .Select-placeholder {
+        background-color: rgba($color-main, 0.05);
+      }
+    }
+  }
+}

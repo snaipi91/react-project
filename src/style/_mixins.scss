@@ -1,0 +1,9 @@
+@mixin after-clear() {
+  content: '';
+  width: 100%;
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
