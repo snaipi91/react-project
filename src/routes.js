@@ -6,7 +6,7 @@ import {/*SimpleLayout, */AuthorizedLayout} from './components/layout';
 // import AuthPage from './components/auth/authPage';
 
 import App from './components/app';
-import Shop from 'components/app';
+import Shop from './components/app';
 // import MainPage from './components/main/mainPage';
 // import SummaryPage from './components/summary/summaryPage';
 import TransactionsPage from './components/transactions/transactionsPage';
