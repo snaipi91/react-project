@@ -1,15 +1,11 @@
 'use strict';
 
-import React, {PropTypes} from 'react';
+import React from 'react';
 
 const App = (props) => {
 	return (
 		<div>{props.children}</div>
 	);
-};
-
-App.propTypes = {
-	children: PropTypes.object.isRequired
 };
 
 export default App;
