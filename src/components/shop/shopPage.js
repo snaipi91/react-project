@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import {connect} from 'react-redux';
 
 class Shop extends React.Component {
     constructor(props, context) {
@@ -9,9 +10,18 @@ class Shop extends React.Component {
 
     render() {
         return (
-            <div>My component</div>
+            <div className={"app " + "container-fluid"}>
+                <h1>Shops</h1>
+                <p>{this.props.test}</p>
+            </div>
         );
     }
 }
 
-export default Shop;
+const mapStateToProps = (state) => {
+    return {
+        shop: state.test
+    };
+};
+
+export default connect(mapStateToProps)(Shop);

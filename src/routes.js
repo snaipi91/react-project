@@ -12,7 +12,7 @@ import Shop from './components/shop/shopPage';
 import TransactionsPage from './components/transactions/transactionsPage';
 import ReportPage from './components/report/reportPage';
 
-console.log('TransactionPage ' + TransactionsPage + '\n' + 'Shop ' + Shop);
+// console.log('TransactionPage ' + TransactionsPage + '\n' + 'Shop ' + Shop);
 
 export default function configureRoutes(store) {
 	const authTransition = (nextState, replace, cb) => {
