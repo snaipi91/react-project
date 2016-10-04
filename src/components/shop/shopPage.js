@@ -2,10 +2,18 @@
 
 import React, {Component} from 'react';
 
-const Shop = () => {
-    return (
-        <div>My Component</div>
-    );
-};
+class Shop extends React.Component {
+    constructor(props, context) {
+        super(props, context);
+
+        this.handler = this.handler.bind(this);
+    }
+
+    render() {
+        return (
+            <div>My component</div>
+        );
+    }
+}
 
 export default Shop;

@@ -19,8 +19,6 @@ import './style/index.scss';
 
 // socketActions(store);
 
-console.log(ReactDOM);
-
 ReactDOM.render(
 	<Provider store={store}>
 		<Router history={browserHistory} routes={routes}/>
