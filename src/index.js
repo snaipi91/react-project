@@ -15,6 +15,8 @@ const routes = configureRoutes(store);
 import 'react-select/scss/default.scss';
 import './style/index.scss';
 
+console.log(store.getState());
+
 // import socketActions from './actions/socketActions';
 
 // socketActions(store);

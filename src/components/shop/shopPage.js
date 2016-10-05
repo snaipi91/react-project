@@ -12,7 +12,7 @@ class Shop extends React.Component {
         return (
             <div className={"app " + "container-fluid"}>
                 <h1>Shops</h1>
-                <p>{this.props.test}</p>
+                <p>{this.props.Cells}</p>
             </div>
         );
     }
@@ -20,7 +20,7 @@ class Shop extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        shop: state.test
+        shop: state.Cells
     };
 };
 
