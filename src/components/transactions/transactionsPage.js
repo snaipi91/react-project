@@ -34,9 +34,7 @@ class TransactionsPage extends React.Component {
 	}
 }
 
-TransactionsPage.propTypes = {
-
-};
+console.log(new TransactionsPage());
 
 const mapStateToProps = (state) => {
 	return {
