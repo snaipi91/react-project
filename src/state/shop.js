@@ -1,8 +1,5 @@
 export default {
-    Cells: {
-        Name: "Вугар",
-        TypeService: "реализация непродовольственных товаров",
-        AdmArea: "Западный административный округ",
-        Address: "Гвардейская улица, дом 5, корпус 2"
-    }
+    items: null,
+    loadItems: false,
+    itemsError: null
 }

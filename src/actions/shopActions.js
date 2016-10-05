@@ -3,7 +3,9 @@
 import {ShopConst} from '../consts';
 
 export function loadItem() {
-    return {
-        type: ShopConst.LOADING_ITEM
-    }
+    return dispatch => {
+        dispatch({
+            type: ShopConst.LOADING_ITEM
+        });
+    };
 }
