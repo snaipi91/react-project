@@ -1,5 +1,7 @@
 export default {
-    items: null,
+    items: {
+        example: "Начальное состояние"
+    },
     loadItems: false,
     itemsError: null
 }

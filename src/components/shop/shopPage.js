@@ -12,15 +12,22 @@ class Shop extends React.Component {
         this.onLoadingItems = this.onLoadingItems.bind(this);
     }
 
+    componentWillMount() {
+
+    }
+
     onLoadingItems() {
-        this.props.dispatch(loadItem({items: {fuel: 99}}));
-        console.log(this.props);
+        // this.props.dispatch(loadItem({items: {fuel: 99}}));
+        console.log(this.props.shop);
     }
 
     render() {
         return (
             <div className={"app " + "container-fluid"}>
-                <h1>Shops{this.props.shop}</h1>
+                <h1>Shops</h1>
+                <div className={"items"}>
+                    {this.props.shop}
+                </div>
                 <button onClick={this.onLoadingItems}>Load items</button>
             </div>
         );
@@ -29,13 +36,13 @@ class Shop extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        shop: state.items
+        shop: state.shop.items.example
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        shopAction: bindActionCreators(shopAction, dispatch)
+        shopAction: bindActionCreators(shopAction.loadItem, dispatch)
     };
 };
 

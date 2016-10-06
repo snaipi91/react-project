@@ -2,19 +2,10 @@
 
 import {ShopConst} from '../consts';
 
-export function loadItem(items) {
-    return dispatch => {
-        dispatch({
-            type: ShopConst.LOADING_ITEM,
-            items
-        });
+export const loadItem = () => {
+    console.log('action ' + ShopConst.LOADING_ITEM);
+    return {
+        type: ShopConst.LOADING_ITEM
     };
-}
+};
 
-export function errorItem() {
-    return dispatch => {
-        dispatch({
-            type: ShopConst.ERROR
-        });
-    };
-}

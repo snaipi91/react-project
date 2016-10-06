@@ -6,7 +6,7 @@ export default function (state = Shop, action) {
 
         case ShopConst.LOADING_ITEM: {
             return Object.assign({}, state, {
-                items: action.payload
+                items: {'es': 2016}
             });
         }
 
@@ -17,7 +17,7 @@ export default function (state = Shop, action) {
         }
 
         default: {
-            return state;
+            return Shop;
         }
 
     }

@@ -10,12 +10,11 @@ import configureStore from './store/configureStore';
 import configureRoutes from './routes';
 
 const store = configureStore();
+console.log(store);
 const routes = configureRoutes(store);
 
 import 'react-select/scss/default.scss';
 import './style/index.scss';
-
-console.log(store.getState());
 
 // import socketActions from './actions/socketActions';
 
