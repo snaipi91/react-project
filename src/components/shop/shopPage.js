@@ -12,13 +12,11 @@ class Shop extends React.Component {
         this.onLoadingItems = this.onLoadingItems.bind(this);
     }
 
-    componentWillMount() {
+    componentWillReceiveProps() {
 
     }
 
     onLoadingItems() {
-        // this.props.dispatch(loadItem({items: {fuel: 99}}));
-        console.log(this.props.shop);
     }
 
     render() {
@@ -26,8 +24,9 @@ class Shop extends React.Component {
             <div className={"app " + "container-fluid"}>
                 <h1>Shops</h1>
                 <div className={"items"}>
-                    {this.props.shop}
+                    {this.props.shop.items.example}
                 </div>
+                <div>{this.props.shop.itemsError}</div>
                 <button onClick={this.onLoadingItems}>Load items</button>
             </div>
         );
@@ -36,14 +35,14 @@ class Shop extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        shop: state.shop.items.example
+        shop: state.shop
     };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
+const mapDispatchToProps = dispatch => (
+    {
         shopAction: bindActionCreators(shopAction.loadItem, dispatch)
-    };
-};
+    }
+);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Shop);
