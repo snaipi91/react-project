@@ -3,17 +3,28 @@
 import {ShopConst} from '../consts';
 
 export function loadItem(items) {
-    console.log('ajax');
-    return (dispatch) => {
-        console.log(dispatch);
-        dispatch({
-            type: ShopConst.LOADING_ITEM,
-        });
 
-        fetch('http://api.data.mos.ru/v1/datasets/1838/rows?$top=12&$orderby=Number')
-            .then((response) => {
-                console.log(response); 
-            });
+    return (dispatch) => {
+
+        fetch(`http://api.data.mos.ru/v1/datasets/1838/rows?$top=${items}&$orderby=Number`, {
+            'method': 'get'
+        })
+            .then(response => {
+
+                if(response.status != 200)
+                    console.log(`Проблемы с соеденением - ${response.status}`);
+
+                response.json().then(function(data) {
+                    console.log(data);
+
+                    dispatch({
+                        type: ShopConst.LOADING_ITEM,
+                        payload: data
+                    })
+                });
+
+            })
+
     };
 
 }

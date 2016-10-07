@@ -3,6 +3,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+// import {ShopItems} from 'shopItems';
 
 import * as shopAction from '../../actions/shopActions';
 
@@ -17,7 +18,7 @@ class Shop extends React.Component {
     }
 
     componentDidMount() {
-        this.props.shopAction.loadItem();
+        this.props.shopAction.loadItem(10);
     }
 
     componentWillReceiveProps() {
@@ -32,9 +33,7 @@ class Shop extends React.Component {
         return (
             <div className={"app " + "container-fluid"}>
                 <h1>Shops</h1>
-                <div className={"items"}>
-                    {this.props.shop.items.example}
-                </div>
+
                 <div>{this.props.shop.itemsError}</div>
                 <button onClick={this.onLoadingItems}>Load items</button>
             </div>

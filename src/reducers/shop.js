@@ -6,13 +6,13 @@ export default function (state = Shop, action) {
 
         case ShopConst.LOADING_ITEM: {
             return Object.assign({}, state, {
-                items: {example: action.payload}
+                items: action.payload
             });
         }
 
         case ShopConst.AJAX_LOADING_ITEM: {
             return Object.assign({}, state, {
-                items: {example: action.payload}
+                items: action.payload
             })
         }
 

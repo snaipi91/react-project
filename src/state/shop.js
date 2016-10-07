@@ -1,7 +1,5 @@
 export default {
-    items: {
-        example: "Начальное состояние"
-    },
+    items: [{}],
     loadItems: false,
     itemsError: null
 }
