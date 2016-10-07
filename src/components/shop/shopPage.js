@@ -12,12 +12,20 @@ class Shop extends React.Component {
         this.onLoadingItems = this.onLoadingItems.bind(this);
     }
 
+    componentWillMount() {
+
+    }
+
+    componentDidMount() {
+        this.props.shopAction.loadItem();
+    }
+
     componentWillReceiveProps() {
 
     }
 
     onLoadingItems() {
-        this.props.shopAction.loadItem();
+        this.props.shopAction.ajaxLoadItems();
     }
 
     render() {
