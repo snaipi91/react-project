@@ -17,6 +17,7 @@ class Shop extends React.Component {
     }
 
     onLoadingItems() {
+        this.props.shopAction.loadItem();
     }
 
     render() {
@@ -41,7 +42,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => (
     {
-        shopAction: bindActionCreators(shopAction.loadItem, dispatch)
+        shopAction: bindActionCreators(shopAction, dispatch)
     }
 );
 
