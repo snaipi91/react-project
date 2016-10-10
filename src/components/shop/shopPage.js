@@ -38,7 +38,7 @@ class Shop extends React.Component {
                 <h1>Shops</h1>
                 <ShopItems data={this.props.shop} />
                 <div>{this.props.shop.itemsError}</div>
-                <button onClick={this.onLoadingItems}>Load items</button>
+                <button className={"btn " + "btn-default "  + "navbar-btn " + "loading"} onClick={this.onLoadingItems}>Load items</button>
             </div>
         );
     }

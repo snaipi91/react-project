@@ -21,7 +21,7 @@ export default function configureRoutes(store) {
 		<Route path="/" component={App}>
 			{/*<IndexRoute component={AuthorizedLayout(ReportPage, 'Отчет')} onEnter={authTransition}/>*/}
 			{/*<Route path="/transactions" component={AuthorizedLayout(TransactionsPage, 'Транзакции')} onEnter={authTransition}>*/}
-			<Route path="shop" component={Shop}/>
+			<Route path="/shop" component={Shop}/>
 		</Route>
 	);
 }

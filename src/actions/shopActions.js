@@ -14,13 +14,16 @@ export function loadItem(items) {
                 if(response.status != 200)
                     console.log(`Проблемы с соеденением - ${response.status}`);
 
-                response.json().then(function(data) {
+                response.json()
 
-                    dispatch({
-                        type: ShopConst.LOADING_ITEM,
-                        payload: data
-                    })
-                });
+                    .then(function(data) {
+
+                        dispatch({
+                            type: ShopConst.LOADING_ITEM,
+                            payload: data
+                        })
+
+                    });
 
             })
 

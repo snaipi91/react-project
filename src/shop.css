@@ -1,0 +1,29 @@
+.object__component {
+    background: #3c3c3c;
+    padding: 30px 25px;
+}
+
+.shops {
+    overflow: hidden;
+}
+
+div[class^="col-"] {
+    margin: 15px auto;
+}
+
+.object__component > p {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 17px;
+    color: #f9f9f9;
+}
+
+.object__component p > span {
+    font-size: 17px;
+    color: #00b3ee;
+}
+
+.loading {
+    margin: 20px auto;
+    text-align: center;
+}
