@@ -15,7 +15,6 @@ export function loadItem(items) {
                     console.log(`Проблемы с соеденением - ${response.status}`);
 
                 response.json().then(function(data) {
-                    console.log(data);
 
                     dispatch({
                         type: ShopConst.LOADING_ITEM,

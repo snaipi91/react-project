@@ -10,7 +10,6 @@ import configureStore from './store/configureStore';
 import configureRoutes from './routes';
 
 const store = configureStore();
-console.log(store);
 const routes = configureRoutes(store);
 
 import 'react-select/scss/default.scss';

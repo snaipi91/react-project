@@ -9,31 +9,34 @@ import * as shopAction from '../../actions/shopActions';
 
 class Shop extends React.Component {
     constructor(props, context) {
+        console.log('Конструктор');
         super(props, context);
         this.onLoadingItems = this.onLoadingItems.bind(this);
     }
 
     componentWillMount() {
-
+        console.log('До рендера');
+        this.props.shopAction.loadItem(3);
     }
 
     componentDidMount() {
-        this.props.shopAction.loadItem(10);
+        console.log('После рендера');
     }
 
     componentWillReceiveProps() {
-
+        console.log('Изменили props');
     }
 
     onLoadingItems() {
-        this.props.shopAction.ajaxLoadItems();
+        this.props.shopAction.loadItem(10);
     }
 
     render() {
+        console.log('Рендер');
         return (
             <div className={"app " + "container-fluid"}>
                 <h1>Shops</h1>
-                <ShopItems items={this.props.shop} />
+                <ShopItems data={this.props.shop} />
                 <div>{this.props.shop.itemsError}</div>
                 <button onClick={this.onLoadingItems}>Load items</button>
             </div>
@@ -42,6 +45,7 @@ class Shop extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log('Connect');
     return {
         shop: state.shop
     };
