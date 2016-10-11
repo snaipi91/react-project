@@ -2,6 +2,9 @@ import {ShopConst} from '../consts';
 import {Shop} from '../state';
 
 export default function (state = Shop, action) {
+
+    console.log('Запустился reducer Shop ' + action.type);
+
     switch (action.type) {
 
         case ShopConst.LOADING_ITEM: {

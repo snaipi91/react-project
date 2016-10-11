@@ -21,6 +21,7 @@ class Shop extends React.Component {
 
     componentDidMount() {
         console.log('После рендера');
+        console.log(this);
     }
 
     componentWillReceiveProps() {
