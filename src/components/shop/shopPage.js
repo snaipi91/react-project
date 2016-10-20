@@ -29,7 +29,8 @@ class Shop extends React.Component {
     }
 
     onLoadingItems() {
-        this.props.shopAction.loadItem(10);
+        console.log(this.props.shop.loadItems);
+        this.props.shopAction.loadItem(this.props.shop.loadItems);
     }
 
     render() {

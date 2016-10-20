@@ -20,7 +20,10 @@ export function loadItem(items) {
 
                         dispatch({
                             type: ShopConst.LOADING_ITEM,
-                            payload: data
+                            payload: {
+                                data: data,
+                                loadItem: items + 10
+                            }
                         })
 
                     });

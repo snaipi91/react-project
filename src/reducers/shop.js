@@ -9,7 +9,8 @@ export default function (state = Shop, action) {
 
         case ShopConst.LOADING_ITEM: {
             return Object.assign({}, state, {
-                items: action.payload
+                items: action.payload.data,
+                loadItems: action.payload.loadItem
             });
         }
 

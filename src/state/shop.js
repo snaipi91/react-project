@@ -1,5 +1,5 @@
 export default {
     items: [],
-    loadItems: false,
+    loadItems: 0,
     itemsError: null
 }
