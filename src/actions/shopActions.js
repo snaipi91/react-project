@@ -22,7 +22,7 @@ export function loadItem(items) {
                             type: ShopConst.LOADING_ITEM,
                             payload: {
                                 data: data,
-                                loadItem: items + 10
+                                loadItem: items + 9
                             }
                         })
 

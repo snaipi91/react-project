@@ -39,6 +39,7 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.get('/', (req, res, next)=>{res.sendFile(path.join(__dirname, '../src/index.html')); });
 app.get('/transactions', (req, res, next)=>{res.sendFile(path.join(__dirname, '../src/index.html')); });
 app.get('/shop', (req, res, next)=>{res.sendFile(path.join(__dirname, '../src/index.html')); });
+app.get('/shop/:id', (req, res, next)=>{res.sendFile(path.join(__dirname, '../src/index.html')); });
 
 app.post('/api', function(req, res) {
 	res.header('Content-Type', 'application/json;charset=utf-8');
