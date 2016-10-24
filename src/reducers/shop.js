@@ -14,15 +14,9 @@ export default function (state = Shop, action) {
             });
         }
 
-        case ShopConst.AJAX_LOADING_ITEM: {
-            return Object.assign({}, state, {
-                items: action.payload
-            })
-        }
-
         case ShopConst.ERROR: {
             return Object.assign({}, state, {
-                errors: action.payload
+                itemsError: action.payload.errors
             });
         }
 

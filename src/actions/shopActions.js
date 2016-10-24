@@ -12,7 +12,12 @@ export function loadItem(items) {
             .then(response => {
 
                 if(response.status != 200)
-                    console.log(`Проблемы с соеденением - ${response.status}`);
+                    dispatch({
+                       type: ShopConst.ERROR,
+                        payload: {
+                            errors: `Ошибка запроса - ${response.status}`
+                        }
+                    });
 
                 response.json()
 
@@ -33,12 +38,3 @@ export function loadItem(items) {
     };
 
 }
-
-export function ajaxLoadItems (){
-    return {
-        type: ShopConst.AJAX_LOADING_ITEM,
-        payload: 'Произошло событие клика'
-    };
-
-}
-

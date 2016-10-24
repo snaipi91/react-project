@@ -21,7 +21,6 @@ class Shop extends React.Component {
 
     componentDidMount() {
         console.log('После рендера');
-        console.log(this);
     }
 
     componentWillReceiveProps() {
@@ -33,12 +32,18 @@ class Shop extends React.Component {
     }
 
     render() {
-        console.log('Рендер');
+        var _stateRequest;
+        (this.props.shop.request == true) ? _stateRequest = 'request' : _stateRequest = 'no-request';
+
         return (
             <div className={"app " + "container-fluid"}>
                 <h1>Shops</h1>
                 <ShopItems data={this.props.shop} />
-                <div>{this.props.shop.itemsError}</div>
+                <p className={"bg-success"}>Всего загруженно объектов - {this.props.shop.items.length}</p>
+                <div className={"bg-danger"}>{this.props.shop.itemsError}</div>
+                <div>
+                    <div className={"glyphicon " + "glyphicon-refresh " + _stateRequest}></div>
+                </div>
                 <button className={"btn " + "btn-default "  + "navbar-btn " + "loading"} onClick={this.onLoadingItems}>Load items</button>
             </div>
         );
