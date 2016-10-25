@@ -39,7 +39,8 @@
     "react-select": "^1.0.0-beta14",
     "react-skylight": "^0.4.1",
     "redux": "^3.5.2",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "yandex-map-react": "^1.0.0-beta.12"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
